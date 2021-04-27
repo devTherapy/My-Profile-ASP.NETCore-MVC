@@ -1,0 +1,92 @@
+﻿@model AboutViewModel;
+@{
+    Layout = "_AboutLayout";
+
+}
+
+<section id="about">
+    <div class="overlay"></div>
+    <!-- navbar-->
+    <nav class="navbar">
+        <h1>portfo<span>lio.</span></h1>
+        <ul>
+            <li class="nav-item">
+                <a asp-controller="Home" asp-action="Index" class="nav-links">Home</a>
+            </li>
+            <li class="nav-item">
+                <a asp-controller="Home" asp-action="About" class="nav-links">About</a>
+            </li>
+            <li class="nav-item">
+                <a asp-controller="Home" asp-action="Skills" class="nav-links">Technical Skills</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="nav-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="profile-container">
+
+            <div class="img-container">
+                <img src="~/Images/profile picture main.jpg" alt="" class="profile-img">
+            </div>
+            <div class="text-container">
+                <div class="profile-text-container">
+                    <h1 class="title">About me</h1>
+                    <div class="title-underline"></div>
+                    <p class="profile-text">
+                        "@Model.AboutDescriptor"
+                    </p>
+                </div>
+                <div class="contact-container">
+                    <h1 class="title">contact</h1>
+                    <div class="title-underline"></div>
+                    <div class="info-grid">
+                        <!-- first info -->
+                        <div class="contact-info">
+                            <span class="icon">
+                                <i class="far fa-envelope"></i>
+                            </span>
+                            <!-- <p class="icon-text">Email</p> -->
+                            <p>@Model.Contacts[0].ContactValue</p>
+
+                        </div>
+                        <!-- second info -->
+                        <div class="contact-info">
+                            <span class="icon">
+                                <i class="fas fa-phone"></i>
+                            </span>
+                            <!-- <p class="icon-text">Phonenumber</p> -->
+                            <p>@Model.Contacts[1].ContactValue</p>
+                        </div>
+                        <!--end of second info -->
+                        <!-- third info -->
+                        <div class="contact-info">
+                            <span class="icon twitter-icon">
+                                <i class="fab fa-twitter"></i>
+                            </span>
+                            <!-- <p class="icon-text">Email</p> -->
+                            <p>@Model.Contacts[2].ContactValue</p>
+
+                        </div>
+                        <!-- fourth info -->
+                        <div class="contact-info">
+                            <span class="icon linkedin-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </span>
+                            <!-- <p class="icon-text">Email</p> -->
+                            <p>@Model.Contacts[3].ContactValue</p>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
+<script src="~/js/index.js"></script>

@@ -1,0 +1,33 @@
+﻿@model HomeViewModel;
+<header id="home">
+    <div class="overlay"></div>
+    <!-- navbar-->
+    <nav class="navbar">
+        <h1>portfo<span>lio.</span></h1>
+        <ul>
+            <li class="nav-item">
+                <a asp-controller="Home" asp-action ="Index" class="nav-links">Home</a>
+            </li>
+            <li class="nav-item">
+                <a asp-controller="Home" asp-action="About" class="nav-links">About</a>
+            </li>
+            <li class="nav-item">
+                <a asp-controller="Home" asp-action="Skills" class="nav-links">Technical Skills</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="nav-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    
+        <!-- banner -->
+        <div class="banner">
+            <div class="text1">Hello, my name is</div>
+            <div class="text2">@Model.Name</div>
+            <div class="text3">And I'm a <span class="txt-style" data-wait="3000" data-words='["@Model.Professions[0].ProfessionName","@Model.Professions[1].ProfessionName","@Model.Professions[2].ProfessionName"]'></span></div>
+            <a asp-controller="Home" asp-action="About" class="banner-btn">Read more</a>
+        </div>
+    </div>
+</header>  
+<script src="JS/portfolio.js"></script>

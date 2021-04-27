@@ -1,0 +1,90 @@
+﻿
+@model SKillsViewModel;
+@{
+    Layout = "_SkillsLayout";
+
+}
+
+<section id="skills">
+    <div class="overlay"></div>
+    <!-- navbar-->
+    <nav class="navbar">
+        <h1>portfo<span>lio.</span></h1>
+        <ul>
+            <li class="nav-item">
+                <a asp-controller="Home" asp-action="Index" class="nav-links">Home</a>
+            </li>
+            <li class="nav-item">
+                <a asp-controller="Home" asp-action="About" class="nav-links">About</a>
+            </li>
+            <li class="nav-item">
+                <a asp-controller="Home" asp-action="Skills" class="nav-links">Technical Skills</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="nav-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <!-- skills section -->
+        <h1 class="title">My Skills</h1>
+        <div class="title-underline"></div>
+        <div class="skill-section-container">
+            <div class="section-text-container">
+                <p class="text">
+                    @Model.SkillDescriptor
+                </p>
+            </div>
+            <div class="skill-container">
+                <div class="skill-bar-container">
+                    <div class="skill-bar">
+                        <p>@Model.Skills[0].SkillName</p>
+                        <p class="go-right">@Model.Skills[0].Percentage</p>
+                        <div class="bar html-bar"></div>
+                    </div>
+                    <div class="skill-bar">
+                        <p>@Model.Skills[1].SkillName</p>
+                        <p class="go-right">@Model.Skills[1].Percentage</p>
+                        <div class="bar css-bar"></div>
+                    </div>
+                    <div class="skill-bar">
+                        <p>@Model.Skills[2].SkillName</p>
+                        <p class="go-right">@Model.Skills[2].Percentage</p>
+                        <div class="bar js-bar"></div>
+                    </div>
+                    <div class="skill-bar">
+                        <p>@Model.Skills[3].SkillName</p>
+                        <p class="go-right">@Model.Skills[3].Percentage</p>
+                        <div class="bar node-bar"></div>
+                    </div>
+                    <div class="skill-bar">
+                        <p>@Model.Skills[4].SkillName</p>
+                        <p class="go-right">@Model.Skills[4].Percentage</p>
+                        <div class="bar net-bar"></div>
+                    </div>
+                    <div class="skill-bar">
+                        <p>@Model.Skills[5].SkillName</p>
+                        <p class="go-right">@Model.Skills[5].Percentage</p>
+                        <div class="bar type-bar"></div>
+                    </div>
+                    <div class="skill-bar">
+                        <p>@Model.Skills[6].SkillName</p>
+                        <p class="go-right">@Model.Skills[6].Percentage</p>
+                        <div class="bar react-bar"></div>
+                    </div>
+                    <div class="skill-bar">
+                        <p>@Model.Skills[7].SkillName</p>
+                        <p class="go-right">@Model.Skills[7].Percentage</p>
+                        <div class="bar angular-bar"></div>
+                    </div>
+                    <!--  end of skill bar container-->
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+</section>
+<script src="~/js/index.js"></script>
